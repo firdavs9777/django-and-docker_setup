@@ -1,0 +1,9 @@
+version: '3.7'
+services: 
+  web:
+    build: .
+    command: python /code2/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code2 
+    ports: 
+      - "8000:8000"
